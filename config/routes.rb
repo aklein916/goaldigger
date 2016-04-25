@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  root "categories#index"
+  resources :categories, only: [:index, :show]
+  resources :goals, only: [:index, :show]
+  resources :users
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
