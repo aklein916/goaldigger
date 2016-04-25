@@ -1,3 +1,3 @@
 class Goal < ActiveRecord::Base
-  belongs_to :category
-end  
+  belongs_to :user
+end
