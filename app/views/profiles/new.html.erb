@@ -1,0 +1,6 @@
+<!-- link to sign up page -->
+<%= link_to "Sign Up", new_user_registration_path %>
+<!--link to sign up page if not currently signed in -->
+<% if !current_user %>
+<%= link_to "Sign Up", new_user_registration_path %>
+<% end %>

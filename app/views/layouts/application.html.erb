@@ -8,27 +8,30 @@
 
 </head>
 <body>
+  <nav>
+    <ul id="top-left-nav-bar">
+      <li> <a href="#">about</a></li>
+      <li> <a href="#">goalers</a></li>
+      <li> <a href="#">categories</a></li>
+      <li> <a href="#">contact</a></li>
+    </ul>
+    <ul id="top-right-nav-bar">
+      <li> <a href="#">sign-in</a></li>
+      <li>
+        <!-- link to sign up page -->
+        <%= link_to "Sign Up", new_user_registration_path %>
+        <!--link to sign up page if not currently signed in -->
+        <!-- <% if !current_user %>
+        <%= link_to "Sign Up", new_user_registration_path %>
+      <% end %>-->
+    </li>
+    </ul>
+  </nav>
   <h1>Be a GOALdigger!</h1>
-    <nav>
-      <ul id="top-left-nav-bar">
-        <li href="#">about</li>
-        <li href="#">goalers</li>
-        <li href="#">categories</li>
-        <li href="#">contact</li>
-      </ul>
-      <ul id="top-right-nav-bar">
-        <li href=#>sign-in<li>
-        <li href=#>sign-up<li>
-      </ul>
-    </nav>    
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <!-- link to sign up page -->
-  <%= link_to "Sign Up", new_user_registration_path %>
-  <!--link to sign up page if not currently signed in -->
-  <% if !current_user %>
-  <%= link_to "Sign Up", new_user_registration_path %>
-<% end %>
+
 
 <%= yield %>
 
