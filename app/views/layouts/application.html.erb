@@ -10,22 +10,18 @@
 <body>
   <nav>
     <ul id="top-left-nav-bar">
-      <li> <a href="#">about</a></li>
+      <li> <a href="profiles#index">about</a></li>
       <li> <a href="#">goalers</a></li>
-      <li> <a href="#">categories</a></li>
       <li> <a href="#">contact</a></li>
     </ul>
     <ul id="top-right-nav-bar">
       <li> <a href="#">sign-in</a></li>
       <li>
-        <%=link_to "sign-up", new_profile_path %> 
+        <%= link_to "sign-up", new_user_registration_path %>
       </li>
     </ul>
   </nav>
   <h1>Be a GOALdigger!</h1>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
 
 <%= yield %>

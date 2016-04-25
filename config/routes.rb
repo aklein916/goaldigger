@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   root "profiles#index"
-  resources :categories, only: [:index, :show]
   resources :goals, only: [:index, :show, :new, :create]
   resources :profiles, only: [:index, :show, :new, :create]
   devise_for :users

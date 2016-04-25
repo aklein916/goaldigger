@@ -5,6 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Category.destroy_all
 Goal.destroy_all
 Profile.destroy_all

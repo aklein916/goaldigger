@@ -16,15 +16,6 @@ ActiveRecord::Schema.define(version: 20160425175313) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
-    t.string "catname"
-    t.string "money"
-    t.string "career"
-    t.string "health"
-    t.string "fun"
-    t.string "personal"
-  end
-
   create_table "goals", force: :cascade do |t|
     t.string  "title"
     t.date    "deadline"
