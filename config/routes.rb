@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   root "profiles#index"
   resources :categories, only: [:index, :show]
-  resources :goals, only: [:index, :show]
-  resources :profiles, only: [:index, :show]
+  resources :goals, only: [:index, :show, :new, :create]
+  resources :profiles, only: [:index, :show, :new, :create]
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

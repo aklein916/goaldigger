@@ -18,13 +18,8 @@
     <ul id="top-right-nav-bar">
       <li> <a href="#">sign-in</a></li>
       <li>
-        <!-- link to sign up page -->
-        <%= link_to "Sign Up", new_user_registration_path %>
-        <!--link to sign up page if not currently signed in -->
-        <!-- <% if !current_user %>
-        <%= link_to "Sign Up", new_user_registration_path %>
-      <% end %>-->
-    </li>
+        <%=link_to "sign-up", new_profile_path %> 
+      </li>
     </ul>
   </nav>
   <h1>Be a GOALdigger!</h1>
