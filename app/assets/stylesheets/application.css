@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
  h1{
    text-align: center;
    padding: 5px;
@@ -32,14 +32,19 @@
    list-style-image: none;
    background-color: grey;
    color: white;
- }
+}
 
- #top-right-nav-bar{
-   text-align: right;
+nav {
+  margin: auto;
+  height: 50px;
+  width: 100%;
+}
+
+ #top-right-nav-bar a{
    padding: 10px;
+   color: white;
  }
 
- a{
-   color: white;
-   text-decoration: none;
+ #top-right-nav-bar {
+   float: left;
  }
