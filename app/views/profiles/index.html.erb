@@ -2,9 +2,9 @@
   <h3><%=link_to "Create your Own Goals", new_profile_path %></h3>
   <h1>Get to know some GOALdiggers</h1>
   <div class="row">
-    <div class="col-sm-3 col-md-4" style="background-color:yellow;">
-      <col>
         <% @profiles.each do |profile| %>
+        <col>
+        <div class="col-sm-3 col-md-4" style="background-color:yellow;">
           <h3>
             <%= link_to profile.name, profile %>
           </h3>
@@ -13,8 +13,8 @@
         </h4>
         <img src="<%= profile.photo_url %>"/>
         <h4>  <%= profile.quote %></h4>
-        <% end %>
       </col>
     </div>
+        <% end %>
   </div>
 </div>
