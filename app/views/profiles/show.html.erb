@@ -1,0 +1,14 @@
+<% @profile.goals.each do |goal| %>
+<h1><%= @profile.name %></h1>
+<%= image_tag @profile.photo_url, class: "profile-photo" %>
+  <div class="goals">
+    <h2>My Goals</h2>
+    <h3><%= goal.category.sort_by { |category|  } %></h3>
+    <ul>
+        <li>
+          <%= link_to "#{goal.title} (#{goal.description})", profile_goal_path ( @profile, goal ) %>
+        </li>
+    </ul>
+
+  </div>
+<% end %>
