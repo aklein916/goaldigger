@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Goal.destroy_all
 Profile.destroy_all
+
+alexa = Profile.create(name:"Alexa", age:25, photo_url:"", quote: "Sometimes I believe in as many as six impossible things before breakfast!" )
