@@ -20,6 +20,9 @@
    flex: auto;
    margin: 10px auto;
  }
+ .content {
+   margin: 15px;
+ }
 
  ul {
    padding: 10px;
@@ -46,4 +49,13 @@
   color: white;
   font-size: 20px;
   padding: 10px;
+ }
+ .tips{
+   display: block;
+   list-style: circle;
+   list-style-position: outside;
+   margin-left: 20px;
+ }
+ .tips li{
+   padding: 5px;
  }
