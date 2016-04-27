@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "profiles#index"
+  root "profiles#home"
   resources :profiles do
     resources :goals
   end

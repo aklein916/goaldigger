@@ -49,7 +49,7 @@ class GoalsController < ApplicationController
 
     redirect_to profile_goals_path( @profile )
   end
-
+  
   private
   def goal_params
     params.require(:goal).permit(:title, :description, :deadline, :category)
