@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
 
 #create
   def create
-    profile.create(profile_params.merge(user: current_user))
+    # Profile.create(profile_params.merge(user: current_user))
     @profile = Profile.create!(profile_params)
     @profile.save!
     redirect_to profile_path(@profile)
