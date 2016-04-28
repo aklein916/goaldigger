@@ -17,21 +17,18 @@
       <!-- <li> contact<a href="#">contact</a></li> -->
     </ul>
     <ul id="top-right-nav-bar">
-      <% if !current_user %>
         <li>
-          <%= link_to "sign-up", new_user_registration_path%>
+          <%= link_to "sign-up", new_user_registration_path %>
         </li>
-      <% else %>
-      <% if !user_signed_in? %>
         <li>
-          <%= link_to('sign-in', new_user_session_path)  %>
+          <%= link_to 'sign-in', new_user_session_path %>
         </li>
-        <% else %>
-        <% if user_signed_in? %>
-      <li>
-        <%= link_to('sign-out', destroy_user_session_path, :method => :delete) %>        
-      </li>
-    </ul>
+        <% if user_signed_in?  %>
+        <li>
+          <%= link_to 'sign-out', destroy_user_session %>
+        </li>
+        <% end %>
+      </ul>
   </nav>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
