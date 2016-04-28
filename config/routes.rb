@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   root "profiles#home"
-  resources :categories
   resources :profiles do
     resources :goals
   end

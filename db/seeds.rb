@@ -17,9 +17,3 @@ joy = Profile.create(name:'Jen', age:28, photo_url: '', quote: 'Do unto others a
 cara = Profile.create(name:"Alexa", age:25, photo_url:"", quote: "Sometimes I believe in as many as six impossible things before breakfast!")
 
 rachel = Profile.create(name:'Jen', age:28, photo_url: '', quote: 'Do unto others as you would like others to do unto you.')
-
-health    = Category.create(type:"health")
-financial = Category.create(type: 'financial')
-personal  = Category.create(type: 'personal')
-career    = Category.create(type: 'career')
-fun       = Category.create(type: 'fun')

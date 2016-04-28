@@ -1,6 +1,23 @@
-<!-- link to sign up page -->
-<%= link_to "Sign In", new_user_session_path %>
-<!--link to sign up page if not currently signed in -->
-<% if !current_user %>
-<%= link_to "Sign Up", new_user_registration_path %>
+<h2>New Profile</h2>
+
+<%= form_for @profile do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :creationdate %>
+  <%= f.text_field :creationdate %>
+
+  <%= f.label :age %>
+  <%= f.integer :age %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :quote %>
+  <%= f.text_field :quote %>
+
+  <%= f.submit %>
 <% end %>
