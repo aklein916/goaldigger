@@ -1,0 +1,15 @@
+<%= form_for @goal do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.number_field :age, in: 1.0..100.0 %>
+
+  <%= f.label :date %>
+  <%= select_date Date.today, prefix: :creationdate %>
+
+  <%= f.label :photo_URL %>
+  <%= f.file_field :photo_url %>
+
+  <%= f.submit %>
+<% end %>

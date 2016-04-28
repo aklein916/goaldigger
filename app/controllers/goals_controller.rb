@@ -17,7 +17,7 @@ class GoalsController < ApplicationController
 
 #create
   def create
-    Goal.create(goal_params.merge(user: current_user))
+    # Goal.create(goal_params.merge(user: current_user))
     @goal = Goal.create!(goal_params)
     @goal.save!
     redirect_to goal_path(@goal)
