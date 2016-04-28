@@ -1,60 +1,56 @@
 class GoalsController < ApplicationController
-
   #index
   def index
-    @profile = Profile.find(params[:profile_id])
-    @goals = @profile.goals.all
+    @goals = Goal.all
   end
 
-  #show
+#show
   def show
-    @profile = Profile.find(params[:profile_id])
     @goal = Goal.find(params[:id])
   end
 
-  #new
+#new
   def new
-    @profile = Profile.find(params[:profile_id])
     @goal = Goal.new
   end
 
-  #create
+#create
   def create
-    @profile = Profile.find(params[:profile_id])
-    @goal = @profule.goals.create(goal_params)
-    # @goal.save!
-    redirect_to profile_goals_path(@profile, @goal)
-  end
+    # Goal.create(goal_params.merge(user: current_user))
+    # if @goal.user == false
+    @goal = Goal.create!(goal_params)
+    @goal.save!
+    redirect_to goal_path(@goal)
+  else flash[:alert] = "Only one goal can exist per account."
+    end
 
-  #edit
+  # edit
   def edit
-    @profile = Profile.find(params[:profile_id])
     @goal = Goal.find(params[:id])
   end
 
-  #update
+
+  # update
   def update
-    @profile = Profile.find(params[:profile_id])
     @goal = Goal.find(params[:id])
     @goal.update(goal_params)
 
-    redirect_to profile_goals_path(@profile, @goal)
+    redirect_to goal_path(@goal)
   end
 
-  #destroy
+  #delete
   def destroy
-    @profile = Profile.find(params[:profile_id])
     @goal = Goal.find(params[:id])
-    @goal.destroy
-
-    redirect_to profile_goals_path( @profile )
+    if @goal.user == current_user
+      @goal.destroy
+    else
+      flash[:alert] = "Only the owner of the goal can delete"
+    end
+    redirect_to goals_path
   end
-  
+
   private
-  def goal_params
-    params.require(:goal).permit(:title, :description, :deadline, :category)
+    def goal_params
+      params.require(:goal).permit(:name, :age, :photo_url, :email, :title, :description, :deadline, :category, :step1. :step2, :step3)
   end
-
-end
-
 end

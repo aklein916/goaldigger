@@ -1,0 +1,9 @@
+
+<h1><%= @goal.name %></h1>
+<%= image_tag @goal.photo_url%>
+<div class = 'link'>
+<%= link_to "Edit Goal", edit_goal_path %>
+<%= link_to "Delete Goal", @goal.destroy %>
+</div>
+
+<button><%= link_to "I'm Ready To Set My Goals!", profile_goals_path  %><button>

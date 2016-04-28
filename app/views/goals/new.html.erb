@@ -1,0 +1,24 @@
+<h2>I'm a GOALdigger</h2>
+
+<%= form_for @goal do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.number_field :age, in: 1.0..100.0 %>
+
+  <%= f.label :date %>
+  <%= select_date Date.today, prefix: :creationdate %>
+
+  <%= f.label :photo_URL %>
+  <%= f.file_field :photo_url %>
+  <%= f.url_field :photo_url %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :favorite_quote %>
+  <%= f.text_area :quote %>
+
+  <%= f.submit %>
+<% end %>

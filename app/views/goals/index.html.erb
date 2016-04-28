@@ -1,3 +1,21 @@
-Here is the explanation of setting goals and show the form for setting them
-
-<%= link_to "ready to make my own", new_profile_goal_path %>
+<div class="container-fluid">
+  <h3><%=link_to "Create An Account", new_user_registration_path %></h3>
+  <h3> <%=link_to "I want to create my profile!", new_profile_path %></h3>
+  <h1>Get to know some GOALdiggers</h1>
+  <div class="row">
+        <% @profiles.each do |profile| %>
+        <col>
+        <div class="col-sm-3 col-md-4" style="background-color:yellow;">
+          <h3>
+            <%= link_to profile.name, profile %>
+          </h3>
+          <h4>Age
+          <%= profile.age %>
+        </h4>
+        <img src="<%= profile.photo_url %>"/>
+        <h4>  <%= profile.quote %></h4>
+      </col>
+    </div>
+        <% end %>
+  </div>
+</div>
