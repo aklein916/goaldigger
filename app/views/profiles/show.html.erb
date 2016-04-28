@@ -1,6 +1,7 @@
 
 <h1><%= @profile.name %></h1>
 <%= image_tag @profile.photo_url%>
-<div class = 'editlink'>
+<div class = 'link'>
 <%= link_to "Edit Profile", edit_profile_path %>
+<%= link_to "Delete Profile", @profile.destroy %>
 </div>
