@@ -1,19 +1,18 @@
 <div class="container-fluid">
   <h3><%=link_to "Create An Account", new_user_registration_path %></h3>
-  <h3> <%=link_to "I want to create my profile!", new_profile_path %></h3>
+  <h3> <%=link_to "I want to create my goals!", new_goal_path %></h3>
   <h1>Get to know some GOALdiggers</h1>
   <div class="row">
-        <% @profiles.each do |profile| %>
+        <% @goals.each do |goal| %>
         <col>
         <div class="col-sm-3 col-md-4" style="background-color:yellow;">
           <h3>
-            <%= link_to profile.name, profile %>
+            <%= link_to goal.name, goal %>
           </h3>
           <h4>Age
-          <%= profile.age %>
+          <%= goal.age %>
         </h4>
-        <img src="<%= profile.photo_url %>"/>
-        <h4>  <%= profile.quote %></h4>
+        <img src="<%= goal.photo_url %>"/>
       </col>
     </div>
         <% end %>
