@@ -17,13 +17,13 @@ class ProfilesController < ApplicationController
 #create
   def create
     # Profile.create(profile_params.merge(user: current_user))
-    if @profile.user == false
+    # if @profile.user == false
     @profile = Profile.create!(profile_params)
     @profile.save!
     redirect_to profile_path(@profile)
   else flash[:alert] = "Only one profile can exist per account."
     end
-  end
+  
   # edit
   def edit
     @profile = Profile.find(params[:id])

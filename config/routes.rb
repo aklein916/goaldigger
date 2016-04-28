@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  root "profiles#home"
-  resources :profiles do
-    resources :goals
+  root "goals#home"
+  resources :profiles
+  resources :goals
+  resources :categories
   end
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

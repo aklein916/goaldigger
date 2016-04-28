@@ -4,7 +4,10 @@ class CreateGoals < ActiveRecord::Migration
       t.string :title
       t.date :deadline
       t.text :description
-      t.string :focuscategory
+      t.text :step1
+      t.text :step2
+      t.text :step3
+      t.string :category
       t.boolean :complete
     end
   end
