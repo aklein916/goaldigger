@@ -11,8 +11,11 @@ class GoalsController < ApplicationController
 
 #new
   def new
-    @goal = Goal.new
-
+    if user_signed_in?
+      @goal = Goal.new
+    else
+      flash[:alert] = "You must be signed in to set your goals."
+    end
   end
 
 #create
@@ -39,7 +42,7 @@ class GoalsController < ApplicationController
   #delete
   def destroy
     @goal = Goal.find(params[:id])
-    if @goal.user == current_user
+    if current_user
       @goal.destroy
     else
       flash[:alert] = "Only the owner of the goal can delete"
