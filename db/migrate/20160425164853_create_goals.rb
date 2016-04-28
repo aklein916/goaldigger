@@ -14,6 +14,7 @@ class CreateGoals < ActiveRecord::Migration
       t.text :step3
       t.string :category
       t.boolean :complete
+      t.integer :user_id
     end
   end
 end

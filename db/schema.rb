@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160428172820) do
     t.text    "step3"
     t.string  "category"
     t.boolean "complete"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
