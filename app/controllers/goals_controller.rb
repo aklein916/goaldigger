@@ -12,18 +12,16 @@ class GoalsController < ApplicationController
 #new
   def new
     @goal = Goal.new
+
   end
 
 #create
   def create
-    # Goal.create(goal_params.merge(user: current_user))
-    # if @goal.user == false
+    Goal.create(goal_params.merge(user: current_user))
     @goal = Goal.create!(goal_params)
     @goal.save!
     redirect_to goal_path(@goal)
-  else flash[:alert] = "Only one goal can exist per account."
-    end
-
+  end
   # edit
   def edit
     @goal = Goal.find(params[:id])
