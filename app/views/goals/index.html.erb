@@ -9,10 +9,10 @@
           <h3>
             <%= link_to goal.name, goal %>
           </h3>
-          <h4>Age
-          <%= goal.age %>
+          <h4>
+          <%= goal.title %>
         </h4>
-        <%= goal.photo_url %>
+        <%= goal.category.name %>
       </col>
     </div>
         <% end %>
