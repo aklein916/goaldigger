@@ -5,8 +5,9 @@
 <p> Remember, it is normal to prioritize a certain goal at any given time. Over the course of your life it is important to find the right balance for you.</p>
 
 <h3> The categories and areas of focus we suggest are:<h3>
-  <ul>
-    <% @categories.each do |category| %>
-    <li class="category"> <%= link_to @category.type, category_path  %> </li>
-    <% end %>
-  </ul>
+  <% @categories.each do |category| %>
+  <table>
+    <tr class="category"><%=  category.name %>
+    </tr>
+  </table>  
+  <% end %>

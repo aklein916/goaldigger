@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160428172820) do
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "category"
+    t.string "name"
   end
 
   create_table "goals", force: :cascade do |t|
@@ -32,11 +32,12 @@ ActiveRecord::Schema.define(version: 20160428172820) do
     t.text    "step1"
     t.text    "step2"
     t.text    "step3"
-    t.string  "category"
     t.boolean "complete"
     t.integer "user_id"
-    t.integer "category_id"
+    t.integer "category_id", null: false
   end
+
+  add_index "goals", ["category_id"], name: "index_goals_on_category_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

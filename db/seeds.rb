@@ -9,16 +9,16 @@ Goal.destroy_all
 Category.destroy_all
 
 
-health = Category.create(type: "Health")
-fun = Category.create(type: "Fun")
-career = Category.create(type: "Career")
-financial = Category.create(type: "Financial")
-personal = Category.create(type: "Personal")
+health = Category.create!({name: "Health"})
+fun = Category.create!({name: "Fun"})
+career = Category.create!({name: "Career"})
+financial = Category.create!({name: "Financial"})
+personal = Category.create!({name: "Personal"})
 
 
-Goal.create(name:"Alexa", age:25, photo_url:"", title: "Travel to Asia", description: "I want to take a month long vacation travelling throughout Southeast Asia.", deadline: "2017", category: fun)
-Goal.create(name:'Jen', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.', category: career)
-Goal.create(name:"barb", age:25, photo_url:"", title: "Sometimes I believe in as many as six impossible things before breakfast!", category: health)
-Goal.create(name:'joy', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.', category: personal)
-Goal.create(name:"cara", age:25, photo_url:"", title: "Sometimes I believe in as many as six impossible things before breakfast!", category: financial)
-Goal.create(name:'rachel', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.', category: fun)
+Goal.create!({name:"Alexa", age:25, photo_url:"", title: "Travel to Asia", description: "I want to take a month long vacation travelling throughout Southeast Asia.", deadline: "2017", category: fun})
+Goal.create!({name:'Jen', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.', category: career})
+Goal.create!({name:"barb", age:25, photo_url:"", title: "Sometimes I believe in as many as six impossible things before breakfast!", category: health})
+Goal.create!({name:'joy', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.', category: personal})
+Goal.create!({name:"cara", age:25, photo_url:"", title: "Sometimes I believe in as many as six impossible things before breakfast!", category: financial})
+Goal.create!({name:'rachel', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.', category: fun})
