@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160428172820) do
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
   end
 
   create_table "goals", force: :cascade do |t|
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160428172820) do
     t.string  "category"
     t.boolean "complete"
     t.integer "user_id"
+    t.integer "category_id"
   end
 
   create_table "users", force: :cascade do |t|

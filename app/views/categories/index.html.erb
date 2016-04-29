@@ -7,6 +7,6 @@
 <h3> The categories and areas of focus we suggest are:<h3>
   <ul>
     <% @categories.each do |category| %>
-    <li> <%= @goal.type "Goal"</li> %>
+    <li class="category"> <%= link_to @category.type, category_path  %> </li>
     <% end %>
   </ul>

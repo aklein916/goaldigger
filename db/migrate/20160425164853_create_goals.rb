@@ -12,9 +12,9 @@ class CreateGoals < ActiveRecord::Migration
       t.text :step1
       t.text :step2
       t.text :step3
-      t.string :category
       t.boolean :complete
       t.integer :user_id
+      t.references :category, null: false, index:true
     end
   end
 end
