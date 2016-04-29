@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160428172820) do
     t.text    "step3"
     t.boolean "complete"
     t.integer "user_id"
-    t.integer "category_id", null: false
+    t.integer "category_id"
   end
 
   add_index "goals", ["category_id"], name: "index_goals_on_category_id", using: :btree
