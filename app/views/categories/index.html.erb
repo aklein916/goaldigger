@@ -1,0 +1,12 @@
+<h1> Categories </h1>
+
+<p> Be sure to consider various parts of your life. Focusing only on professional goals could result in missing out on opportunities to enjoy your life. On the other hand, only considering goals about your personal life could result in you not feeling satisfied at work and with your financial situation.</p>
+
+<p> Remember, it is normal to prioritize a certain goal at any given time. Over the course of your life it is important to find the right balance for you.</p>
+
+<h3> The categories and areas of focus we suggest are:<h3>
+  <ul>
+    <% @categories.each do |category| %>
+    <li> <%= @goal.type "Goal"</li> %>
+    <% end %>
+  </ul>
