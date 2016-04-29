@@ -8,12 +8,19 @@
 Goal.destroy_all
 Category.destroy_all
 
-alexa = Goal.create(name:"Alexa", age:25, photo_url:"", title: "Sometimes I believe in as many as six impossible things before breakfast!")
+Goal.create(name:"Alexa", age:25, photo_url:"", title: "Travel to Asia", description: "I want to take a month long vacation travelling throughout Southeast Asia.", deadline: "2017", category: "fun")
 
-jen = Goal.create(name:'Jen', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.')
-barb = Goal.create(name:"barb", age:25, photo_url:"", title: "Sometimes I believe in as many as six impossible things before breakfast!")
+Goal.create(name:'Jen', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.', category: "career")
+Goal.create(name:"barb", age:25, photo_url:"", title: "Sometimes I believe in as many as six impossible things before breakfast!", category: 'health')
 
-joy = Goal.create(name:'joy', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.')
-cara = Goal.create(name:"cara", age:25, photo_url:"", title: "Sometimes I believe in as many as six impossible things before breakfast!")
+Goal.create(name:'joy', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.', category: "personal")
+Goal.create(name:"cara", age:25, photo_url:"", title: "Sometimes I believe in as many as six impossible things before breakfast!", category: 'financial')
 
-rachel = Goal.create(name:'rachel', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.')
+Goal.create(name:'rachel', age:28, photo_url: '', title: 'Do unto others as you would like others to do unto you.')
+
+
+Category.create(type: "health")
+Category.create(type: "fun")
+Category.create(type: "career")
+Category.create(type: "financial")
+Category.create(type: "personal")
