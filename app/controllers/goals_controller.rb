@@ -41,13 +41,14 @@ class GoalsController < ApplicationController
 
   #delete
   def destroy
-    @goal = Goal.find(params[:id])
-    if !current_user
+    if !user_signed_in?
       flash[:alert] = "Only the owner of the goal can delete"
     else
+    @goal = Goal.find(params[:id])
+    puts @goal
     @goal.destroy
-    end
     redirect_to goals_path
+    end
   end
 
   private
